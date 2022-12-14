@@ -60,7 +60,7 @@ const getMessage = (message) => {
 }
 
 const parser = (message) => {
-    const header = message.split("\n")
+    const header = message.split("\r\n")
     const [method, url, version] = header.shift().split(" ")
     const [path, queryString] = url.split("?")
     const query =  getQuery(queryString)
@@ -72,7 +72,7 @@ const parser = (message) => {
     return {method, url, version, path, queryString, query, headers, body}
 }
 
-const result = parser(msg)
-console.log(result)
+// const result = parser(msg)
+// console.log(result)
 
 module.exports = parser

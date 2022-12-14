@@ -53,7 +53,7 @@ const getMessage = (line) => {
         return acc
     },{})
 
-    body = bodyparser(body, headers["Content-Type"]) // {}
+    // body = bodyparser(body, headers["Content-Type"]) // {}
     return [headers, body]
 }
 
@@ -62,7 +62,7 @@ const parser = (message)=>{
     // TODO : startline
     // TODO : header, body 분리하기
     // TODO : header, body 객체 만들기
-    const header = message.split("\r\n") // 한줄한줄 배열로 만들기
+    const header = message.split("\n") // 한줄한줄 배열로 만들기
     const [method, url, version] = header.shift().split(' ') // 맨 위에 줄 한줄 빼는것
     const [path, queryString] = url.split("?") 
     const query = getQuery(queryString)
