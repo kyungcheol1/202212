@@ -41,6 +41,7 @@ const bodyparser = (body, type)=>{
 const getMessage = (line) => {
     let flag = false
     let body = ''
+
     for (const key in line){
         if (flag) body = line.splice(key).map(v=>v.trim()).join("")
         if (line[key] === "") flag = true
@@ -53,7 +54,7 @@ const getMessage = (line) => {
         return acc
     },{})
 
-    // body = bodyparser(body, headers["Content-Type"]) // {}
+    body = bodyparser(body, headers["Content-Type"]) // {}
     return [headers, body]
 }
 
