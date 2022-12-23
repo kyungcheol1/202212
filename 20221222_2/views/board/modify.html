@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>modify</h1>
+        <form method="post" action="/board/modify">
+            <input type="hidden" name="idx" id="" value="{{list.idx}}" />
+            <ul>
+                <li>제목 : <input type="text" name="subject" id="" value="{{list.subject}}" /></li>
+                <li>작성자 : <input type="text" name="writer" value="{{list.writer}}" /></li>
+                <li>내용 :<textarea name="content" id="" cols="30" rows="10">{{list.content}}</textarea></li>
+            </ul>
+            <button type="post">modify</button>
+        </form>
+    </body>
+</html>
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>view</h1>
+        <ul>
+            <li>제목 : {{list.subject}}</li>
+            <li>작성자 : {{list.writer}}</li>
+            <li>내용 : {{list.content}}</li>
+        </ul>
+        <a href="/board/list">back</a>
+        <a href="/board/modify?index={{list.idx}}">modify</a>
+        <a href="/board/delete?index={{list.idx}}">delete</a>
+    </body>
+</html>
+
