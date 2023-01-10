@@ -6,7 +6,7 @@ const pool = mysql
         port: "3306",
         user: "root",
         password: "Qjel216!",
-        database: "cheol",
+        database: "TEAM4",
         connectionLimit: 5,
     })
     .promise();

@@ -105,9 +105,3 @@ mysql -uroot -p[패스워드]
 
 mysql는 ;를 꼭 붙여야한다.
 
-서버 한 페이지를 만드는 실행순서
-server > router > controllers > services > repository
-
-server > 로직을 처리하는 부분
-router > 요청 응답만 하는 친구
-

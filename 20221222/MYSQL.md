@@ -196,3 +196,4 @@ server > router > controllers > services > repository
 
 server > 로직을 처리하는 부분
 router > 요청 응답만 하는 친구
+

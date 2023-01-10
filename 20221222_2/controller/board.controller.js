@@ -8,6 +8,7 @@ exports.list = async (req, res) => {
 exports.view = async (req, res) => {
     const idx = req.query.index;
     const [list] = await service.getview(idx);
+    console.log(list);
     res.render(`board/view.html`, { list });
 };
 

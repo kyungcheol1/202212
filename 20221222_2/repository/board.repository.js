@@ -7,7 +7,9 @@ exports.findAll = async () => {
 
 exports.insert = async (write) => {
     const [ins] = await pool.query(`INSERT INTO board(subject, writer, content) value("${write.subject}", "${write.writer}", "${write.content}")`);
+    console.log(ins);
     const idx = ins.insertId;
+
     return idx;
 };
 
